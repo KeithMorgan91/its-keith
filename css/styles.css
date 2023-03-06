@@ -1,13 +1,13 @@
-    /* Google Fonts */
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap');
+/*========= Google Fonts =========*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap');
 
 :root {
     --header-height: 3rem;
 
-    /* Colors */
+    /*========= Colors =========*/
     --hue-color: 250;
 
-    /* Colors Family */
+    /*========= Colors Family =========*/
     --first-color: hsl(var(--hue-color), 69%, 61%);
     --first-color-second: hsl(var(--hue-color), 69%, 61%);
     --first-color-alt: hsl(var(--hue-color), 57%, 53%);
@@ -19,10 +19,10 @@
     --body-color: hsl(var(--hue-color), 60%, 99%);
     --container-color: #FFF; 
 
-    /* Font Family */
+    /*========= Font Family =========*/
     --body-font: 'Poppins', sans-serif;
 
-    /* Font Sizes */
+    /*========= Font Sizes =========*/
     --big-font-size: 2rem;
     --h1-font-size: 1.5rem;
     --h2-font-size: 1.25rem;
@@ -31,11 +31,11 @@
     --small-font-size: .813rem;
     --small-font-size: .75rem;
 
-    /* Font Weights */
+    /*========= Font Weights =========*/
     --font-medium: 500;
     --font-semi-bold: 600;
 
-    /* Bottom Margins */
+    /*========= Bottom Margins =========*/
     --mb-0-25: .25rem;
     --mb-0-5: .5rem;
     --mb-0-75: .75rem;
@@ -45,13 +45,14 @@
     --mb-2-5: 2.5rem;
     --mb-3: 3rem;
 
-    /* Z-Index */
+    /*========= Z-Index =========*/
     --z-tooltip: 10;
     --z-fixed: 100;
     --z-modal: 100;
 }
 
-/* Font sizing for larger screens */
+
+/*========= Font sizing for larger screens =========*/
 @media screen and (min-width: 968px) {
     :root {
         --big-font-size: 3rem;
@@ -64,7 +65,8 @@
     }
 }
 
-/* Global Styles */
+
+/*========= Global Styles =========*/
 * {
     box-sizing: border-box;
     padding: 0;
@@ -101,7 +103,8 @@ img {
     height: auto;
 }
 
-/* Repeated CSS Classes */
+
+/*========= Repeated CSS Classes =========*/
 .section {
     padding: 2rem 0 4rem;
 }
@@ -121,7 +124,8 @@ img {
     text-align: center;
 }
 
-/* CSS General Layout */
+
+/*========= CSS General Layout =========*/
 .container {
     max-width: 768px;
     margin-left: var(--mb-1-5);
@@ -131,4 +135,42 @@ img {
 .grid {
     display: grid;
     gap: 1.5rem;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+}
+
+
+/*========= Navigation Styles =========*/
+.nav {
+    max-width: 968px;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo,
+.nav__toggle {
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.nav__logo {
+    color: var(--first-color);
+}
+
+.nav__toggle {
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.nav__toggle:hover {
+    color: var(--first-color)
 }
