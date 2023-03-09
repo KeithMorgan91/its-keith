@@ -228,3 +228,13 @@ img {
 .show-menu {
     bottom: 0;
 }
+
+/*========= Home =========*/
+
+
+/*========= About =========*/
+
+.about__img {
+    width: 80px;
+    height: auto;
+}
