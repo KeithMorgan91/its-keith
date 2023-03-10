@@ -448,5 +448,37 @@ img {
 }
 
 .skills__manual {
-    width: 99%;
+    width: 100%;
+}
+
+.skills__uiuix {
+    width: 100%;
+}
+
+.skills__js {
+    width: 16%;
+}
+
+.skills__ts {
+    width: 50%;
+}
+
+.skills__sql {
+    width: 50%;
+}
+
+.skills__sales {
+    width: 16%;
+}
+
+.skills__req {
+    width: 33%;
+}
+
+.skills__money {
+    width: 33%;
+}
+
+.skills__budget {
+    width: 33%;
 }
