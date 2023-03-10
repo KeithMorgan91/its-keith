@@ -286,9 +286,11 @@ img {
     margin-bottom: var(--mb-2);
 }
 
+/*
 .home__scroll {
-    /* display: none; */
+    display: none;
 }
+*/
 
 .home__scroll-button {
     color: var(--first-color);
@@ -340,8 +342,6 @@ img {
     display: inline-flex;
     align-items: center;
 }
-
-
 
 /*========= About =========*/
 
