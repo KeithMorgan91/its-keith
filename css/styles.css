@@ -5,7 +5,7 @@
     --header-height: 3rem;
 
     /*========= Main Hue =========*/
-    --hue-color: 199;
+    --hue-color: 209;
 
     /*========= Colors Family =========*/
     --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -225,10 +225,13 @@ img {
     transform: scale(.98);
 }
 
+
 /*========= Show Menu =========*/
+
 .show-menu {
     bottom: 0;
 }
+
 
 /*========= Home =========*/
 
@@ -260,7 +263,7 @@ img {
 
 .home__blob {
     width: 200px;
-    fill: var(--first-color);
+    fill: rgb(65, 65, 65);
 }
 
 .home__blob-img {
@@ -316,6 +319,7 @@ img {
     font-size: 1.25rem;
 }
 
+
 /*========= Buttons =========*/
 
 .button {
@@ -342,6 +346,7 @@ img {
     display: inline-flex;
     align-items: center;
 }
+
 
 /*========= About =========*/
 
