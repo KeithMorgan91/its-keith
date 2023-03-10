@@ -4,8 +4,8 @@
 :root {
     --header-height: 3rem;
 
-    /*========= Colors =========*/
-    --hue-color: 250;
+    /*========= Main Hue =========*/
+    --hue-color: 199;
 
     /*========= Colors Family =========*/
     --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -222,6 +222,7 @@ img {
 
 .nav__close:hover {
     color: var(--first-color-alt);
+    transform: scale(.98);
 }
 
 /*========= Show Menu =========*/
@@ -254,6 +255,7 @@ img {
 
 .home__social-icon:hover {
     color: var(--first-color-alt);
+    transform: scale(.98);
 }
 
 .home__blob {
@@ -325,6 +327,7 @@ img {
 
 .button:hover {
     background-color: var(--first-color-alt);
+    transform: scale(.98);
 }
 
 .button__icon {
