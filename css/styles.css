@@ -640,8 +640,8 @@ img {
     justify-content: center;
     padding: 0 1rem;
     z-index: var(--z-modal);
-    /* opacity: 0; */
-    /* visibility: hidden; */
+    opacity: 0;
+    visibility: hidden;
     transition: .3s;
 }
 
@@ -668,4 +668,17 @@ img {
 
 .services__modal-close {
     position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--first-color);
+    cursor: pointer;
 }
+
+.services__modal-icon {
+    color: var(--first-color);
+    margin-right: var(--mb-0-25);
+}
+
+/* Active Window */
+
