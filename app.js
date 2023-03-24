@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(event) {  
 
     /*-- Show Menu --*/
+
     const navMenu = document.getElementById('nav-menu'),
           navToggle = document.getElementById('nav-toggle'),
           navClose = document.getElementById('nav-close')
@@ -26,7 +27,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     navLink.forEach(n => n.addEventListener('click', linkAction))
 
 
+
+
     /*-- Skills drop-down arrows --*/
+
     const skillsContent = document.getElementsByClassName('skills__content'),
           skillsHeader = document.querySelectorAll('.skills__header')
 
@@ -44,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     skillsHeader.forEach((el) =>{
         el.addEventListener('click', toggleSkills) 
     })
+
 
     /*-- Qualifications --*/
 
@@ -66,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         })
     })
 
+    
     /*-- Services Windows --*/
 
     const modalViews = document.querySelectorAll('.services__modal')
