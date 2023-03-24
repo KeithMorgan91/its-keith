@@ -570,3 +570,12 @@ img {
 .qualification__button.qualification__active {
     color: var(--first-color);
 }
+
+
+/* Services */
+
+.services__container {
+    hap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
