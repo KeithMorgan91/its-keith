@@ -347,6 +347,20 @@ img {
     align-items: center;
 }
 
+.button--small {
+    padding: .75rem 1rem;
+}
+
+.button--link {
+    padding: 0;
+    background-color: transparent;
+    color: var(--first-color);
+}
+
+.button--link:hover {
+    background-color: transparent;
+    color: var(--first-color);
+}
 
 /*========= About =========*/
 
@@ -605,3 +619,7 @@ img {
     font-weight: var(--font-medium);
 }
 
+.services__button {
+    cursor: pointer;
+    font-size: var(--small-font-size);
+}
