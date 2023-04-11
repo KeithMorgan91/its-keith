@@ -716,3 +716,7 @@ img {
     transform: translateX(.25rem);
 }
 
+.swiper-button-prev::after,
+.swiper-button.next::after{
+    content: '';
+}
