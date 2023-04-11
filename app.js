@@ -1,96 +1,104 @@
-   /*-- Show Menu --*/
+/*-- Show Menu --*/
 
-    const navMenu = document.getElementById('nav-menu'),
-          navToggle = document.getElementById('nav-toggle'),
-          navClose = document.getElementById('nav-close')
+const navMenu = document.getElementById("nav-menu"),
+  navToggle = document.getElementById("nav-toggle"),
+  navClose = document.getElementById("nav-close");
 
-    if(navToggle){
-        navToggle.addEventListener('click', () =>{
-            navMenu.classList.add('show-menu')
-        })
-    }
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.add("show-menu");
+  });
+}
 
-    if(navClose){
-        navClose.addEventListener('click', () =>{
-            navMenu.classList.remove('show-menu')
-        })
-    }
+if (navClose) {
+  navClose.addEventListener("click", () => {
+    navMenu.classList.remove("show-menu");
+  });
+}
 
-    const navLink = document.querySelectorAll('.nav__link')
+const navLink = document.querySelectorAll(".nav__link");
 
-    function linkAction(){
-        const navMenu = document.getElementById('nav-menu')
-        navMenu.classList.remove('show-menu')
-    }
-    navLink.forEach(n => n.addEventListener('click', linkAction))
+function linkAction() {
+  const navMenu = document.getElementById("nav-menu");
+  navMenu.classList.remove("show-menu");
+}
+navLink.forEach((n) => n.addEventListener("click", linkAction));
 
+/*-- Skills drop-down arrows --*/
 
+const skillsContent = document.getElementsByClassName("skills__content"),
+  skillsHeader = document.querySelectorAll(".skills__header");
 
+function toggleSkills() {
+  let itemClass = this.parentNode.className;
 
-    /*-- Skills drop-down arrows --*/
+  for (i = 0; i < skillsContent.length; i++) {
+    skillsContent[i].className = "skills__content skills__close";
+  }
+  if (itemClass === "skills__content skills__close") {
+    this.parentNode.className = "skills__content skills__open";
+  }
+}
 
-    const skillsContent = document.getElementsByClassName('skills__content'),
-          skillsHeader = document.querySelectorAll('.skills__header')
+skillsHeader.forEach((el) => {
+  el.addEventListener("click", toggleSkills);
+});
 
-    function toggleSkills(){
-        let itemClass = this.parentNode.className
+/*-- Qualifications --*/
 
-        for(i = 0; i < skillsContent.length; i++){
-            skillsContent[i].className = 'skills__content skills__close'
-        }
-        if(itemClass === 'skills__content skills__close'){
-            this.parentNode.className = 'skills__content skills__open'
-        }
-    }
+const tabs = document.querySelectorAll("[data-target]"),
+  tabContents = document.querySelectorAll("[data-content]");
 
-    skillsHeader.forEach((el) =>{
-        el.addEventListener('click', toggleSkills) 
-    })
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = document.querySelector(tab.dataset.target);
 
+    tabContents.forEach((tabContent) => {
+      tabContent.classList.remove("qualification__active");
+    });
+    target.classList.add("qualification__active");
 
-    /*-- Qualifications --*/
+    tabs.forEach((tab) => {
+      tab.classList.remove("qualification__active");
+    });
+    tab.classList.add("qualification__active");
+  });
+});
 
-    const tabs = document.querySelectorAll('[data-target]'),
-          tabContents = document.querySelectorAll('[data-content]')
+/*-- Services Windows --*/
 
-    tabs.forEach(tab =>{
-        tab.addEventListener('click', () =>{
-            const target = document.querySelector(tab.dataset.target)
+const modalViews = document.querySelectorAll(".services__modal");
+modalBtns = document.querySelectorAll(".services__button");
+modalCloses = document.querySelectorAll("services__modal-close");
 
-            tabContents.forEach(tabContent =>{
-                tabContent.classList.remove('qualification__active')
-            })
-            target.classList.add('qualification__active')
+let modal = function (modalClick) {
+  modalViews[modalClick].classList.add("active-modal");
+};
 
-            tabs.forEach(tab =>{
-                tab.classList.remove('qualification__active')
-            })
-            tab.classList.add('qualification__active')
-        })
-    })
+modalBtns.forEach((modalBtn, i) => {
+  modalBtn.addEventListener("click", () => {
+    modal(i);
+  });
+});
 
-    
-    /*-- Services Windows --*/
-    
-    const modalViews = document.querySelectorAll('.services__modal')
-          modalBtns = document.querySelectorAll('.services__button')
-          modalCloses = document.querySelectorAll('services__modal-close')
+modalCloses.forEach((modalClose) => {
+  modalClose.addEventListener("click", () => {
+    modalViews.forEach((modalView) => {
+      modalView.classList.remove("active-modal");
+    });
+  });
+});
 
-
-    let modal = function(modalClick){
-        modalViews[modalClick].classList.add('active-modal')
-    }
-
-    modalBtns.forEach((modalBtn, i) => {
-        modalBtn.addEventListener('click', () =>{
-            modal(i)
-        })
-    })
-
-    modalCloses.forEach((modalClose) => {
-        modalClose.addEventListener('click', () =>{
-            modalViews.forEach((modalView) =>{
-                modalView.classList.remove('active-modal')
-            })
-        })
-    })
+// Portfolio Swiper
+let swiper = new Swiper (".portfolio-container", {
+  cssMode: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  mousewheel: true,
+  keyboard: true,
+});

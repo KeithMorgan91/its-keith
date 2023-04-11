@@ -643,10 +643,10 @@
       <h2 class="section__title">Portfolio</h2>
       <span class="section__subtitle">Most recent work</span>
 
-      <div class="portfolio__container container">
-        <div>
-           <!--================== PORTFOLIO 01 ==================-->
-          <div class="portfolio__content grid">
+      <div class="portfolio__container container swiper-container">
+        <div class="swiper-wrapper">
+          <!--================== PORTFOLIO 01 ==================-->
+          <div class="portfolio__content grid swiper-slide">
             <img src="img/wbjennings.png" alt="" class="portfolio__img">
 
             <div class="portfolio__data">
@@ -658,7 +658,9 @@
               </a>
             </div>
           </div>
-          <div class="portfolio__content grid">
+
+          <!--================== PORTFOLIO 02 ==================-->
+          <div class="portfolio__content grid swiper-slide">
             <img src="img/portfolio.png" alt="" class="portfolio__img">
 
             <div class="portfolio__data">
@@ -670,7 +672,9 @@
               </a>
             </div>
           </div>
-          <div class="portfolio__content grid">
+
+          <!--================== PORTFOLIO 03 ==================-->
+          <div class="portfolio__content grid swiper-slide">
             <img src="img/mooney.png" alt="" class="portfolio__img">
 
             <div class="portfolio__data">
@@ -691,8 +695,8 @@
     </main>
 
     <!--================== JS ==================-->
-    <script src="./app.js"></script>
     <script src="./swiper-bundle.min.js"></script>
+    <script src="./app.js"></script>
 
   </body>
 </html> 
