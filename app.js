@@ -1,6 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(event) {  
-
-    /*-- Show Menu --*/
+   /*-- Show Menu --*/
 
     const navMenu = document.getElementById('nav-menu'),
           navToggle = document.getElementById('nav-toggle'),
@@ -96,5 +94,3 @@ document.addEventListener("DOMContentLoaded", function(event) {
             })
         })
     })
-
-})
