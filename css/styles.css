@@ -689,3 +689,16 @@ img {
 
 /* Portfolio */
 
+.portfolio__container {
+    overflow: initial;
+}
+
+.portfolio__container {
+    padding: 0 1.5rem;
+}
+
+.portfolio__img {
+    width: 256px;
+    border-radius: .5rem;
+    justify-self: center;
+}
